@@ -1,0 +1,136 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>BookStoreWebsiteProject</groupId>
+  <artifactId>BookStoreWebsiteProject</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.1</version>
+        <configuration>
+          <warSourceDirectory>WebContent</warSourceDirectory>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+  <properties>
+  
+  		<!-- Oracle JDBC Driver Version -->
+		<oracle.jsbc.version>12.1.0</oracle.jsbc.version>
+		
+		<!-- Hibernate Version Version -->
+		<hibernate.version>5.4.1.Final</hibernate.version>
+		
+		<!-- Java Servlet API Version -->
+		<java.servlet.api.version>4.0.1</java.servlet.api.version>
+		
+		<!-- JSP Servlet API Version -->
+		<jsp.servlet.api.version>2.2.1-b03</jsp.servlet.api.version>
+		
+		<!-- JSTL Version  -->
+		<jstl.api.version>1.2</jstl.api.version>
+		
+		<!-- Google Json Version -->
+		<google.json.version>2.8.3</google.json.version>
+		
+		<!-- Java Mail Version -->
+		<java.mail.version>1.6.2</java.mail.version>
+		
+		<!-- Apache Commons Lang Version Generate Random String -->
+		<apache.commons.lang.version>3.9</apache.commons.lang.version>
+		
+  </properties>
+  
+  <dependencies>
+  
+    <!-- Hibernate Core -->
+  	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+  	<!-- Scope(compile) -> Tüm projeye bu dependency yayma -->
+  	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-core</artifactId>
+	    <version>${hibernate.version}</version>
+	</dependency>
+  	
+	<!-- Oracle Database -->
+	<!-- scope(runtime) -> Çalışma anında kullanılcak -->
+	<dependency>
+        <groupId>com.oracle</groupId>
+        <artifactId>ojdbc7</artifactId>
+        <version>${oracle.jsbc.version}</version>
+        <scope>runtime</scope>
+    </dependency>
+    
+    <!-- Java Servlet API -->
+    <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+    <!-- Scope(provided) -> Runtime bunu kullanmakiçin JDK gerekli  (by JDK or a container at runtime) -->
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>${java.servlet.api.version}</version>
+	    <scope>provided</scope>
+	</dependency>
+    
+    <!-- JSP Servlet API -->
+    <!-- https://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api -->
+    <!-- Scope(provided) -> Runtime bunu kullanmakiçin JDK gerekli (by JDK or a container at runtime) -->
+	<dependency>
+	    <groupId>javax.servlet.jsp</groupId>
+	    <artifactId>jsp-api</artifactId>
+	    <version>${jsp.servlet.api.version}</version>
+	    <scope>provided</scope>
+	</dependency>
+    
+    <!-- JSTL  -->
+    <!-- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl-api -->
+    <!-- Scope(compile) -> Tüm projeye bu dependency yayma -->
+  	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>jstl</artifactId>
+	    <version>${jstl.api.version}</version>
+	    <scope>compile</scope>
+	</dependency>
+	
+  
+  	<!-- Hibernate Pooling  -->
+  	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-c3p0</artifactId>
+	    <version>${hibernate.version}</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>com.google.code.gson</groupId>
+	    <artifactId>gson</artifactId>
+	    <version>${google.json.version}</version>
+	</dependency>
+	
+	<!-- Java Mail -->
+	<dependency>
+	    <groupId>com.sun.mail</groupId>
+	    <artifactId>javax.mail</artifactId>
+	    <version>${java.mail.version}</version>
+	</dependency>
+	
+	<!-- Generate Random String -->
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-lang3</artifactId>
+	    <version>${apache.commons.lang.version}</version>
+	</dependency>
+  
+  </dependencies>
+</project>

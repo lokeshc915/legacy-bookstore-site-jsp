@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.card{
+	margin-top: 100px;
+}
+
+.has-error .help-block {
+  color: red;
+}

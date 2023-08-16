@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-schema="JSPPROJECTDATABASE" match-name=".*"/>
+  <table-filter match-schema="APEX_040000" match-name=".*" exclude="true"/>
+  <table-filter match-schema="CTXSYS" match-name=".*" exclude="true"/>
+  <table-filter match-schema="MDSYS" match-name=".*" exclude="true"/>
+  <table-filter match-schema="SYS" match-name=".*" exclude="true"/>
+  <table-filter match-schema="SYSTEM" match-name=".*" exclude="true"/>
+  <table-filter match-schema="XDB" match-name=".*" exclude="true"/>
+</hibernate-reverse-engineering>
